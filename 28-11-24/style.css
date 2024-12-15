@@ -1,0 +1,152 @@
+/* Variables globales */
+:root{
+    /* Tema claro */
+    --claro-color-primario: #F0F4EF;
+    --claro-texto-primario: #2F4F4F;
+    --claro-color-secundario: #E2F0D9;
+    --claro-texto-secundario: #4C6A4C;
+    --claro-color-acento: #A7C957;
+    --claro-color-hover: #88B04B;
+
+    /* Tema oscuro */
+    --oscuro-color-primario: #1B263B;
+    --oscuro-texto-primario: #EAF0F1;
+    --oscuro-color-secundario: #3A506B;
+    --oscuro-texto-secundario: #B0C4DE;
+    --oscuro-color-acento: #5BC0EB;
+    --oscuro-color-hover: #8AC4E3;
+}
+
+/* USO DE VARIABLES SEGÚN EL TEMA */
+body.tema-claro{
+    --color-primario: var(--claro-color-primario);
+    --texto-primario: var(--claro-texto-primario);
+    --color-secundario: var(--claro-color-secundario);
+    --texto-secundario: var(--claro-texto-secundario);
+    --color-acento: var(--claro-color-acento);
+    --color-hover: var(--claro-color-hover);
+}
+
+body.tema-oscuro{
+    --color-primario: var(--oscuro-color-primario);
+    --texto-primario: var(--oscuro-texto-primario);
+    --color-secundario: var(--oscuro-color-secundario);
+    --texto-secundario: var(--oscuro-texto-secundario);
+    --color-acento: var(--oscuro-color-acento);
+    --color-hover: var(--oscuro-color-hover);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-primario);
+    color: var(--texto-primario);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header{
+    text-align: center;
+    padding: 20px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px 20px;
+    background-color: var(--color-secundario);
+}
+
+.nav-link, .boton-tema{
+ text-decoration: none;
+ color: var(--texto-primario);
+ font-weight: bold;
+ cursor: pointer;
+ transition: color 0.3s;
+}
+
+.nav-link:hover , .boton-tema:hover{
+    color: var(--color-hover);
+}
+
+/* CARTAS */
+
+.seccion-tarjetas{
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor-tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 600px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.card{
+    background-color: var(--color-secundario);
+    color: var(--texto-secundario);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    background-color: var(--color-hover);
+}
+
+.especial{
+    /* flex-grow: 0; Cuando nosotros no indicamos un valor directo con flex-grow, el valor por defecto en todos los items es 0*/
+    flex-grow: 2; /*Ocupa más espacio proporcionalmente*/
+}
+
+.carta-hover:hover{
+    transform: rotate(30deg) scale(1.1);
+}
+
+.card:nth-child(1){
+    align-self: flex-end;
+}
+
+.card:nth-child(3){
+    order: -1;
+}
+
+/* FORMULARIO */
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+button{
+    background-color: var(--color-acento);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--color-hover);
+}
