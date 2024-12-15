@@ -15,10 +15,12 @@ header{
 
 h2{
     font-size: 20px;
-    background: linear-gradient(to right, #B084CC, white);
-    -webkit-mask-image: linear-gradient(to right, #B084CC, white);
-    mask-image: linear-gradient(to right, #B084CC, white);
-    display: inline-block;
+    color: #B084CC;
+}
+
+h3{
+    font-size: 20px;
+    color: #B084CC;
 }
 
 footer{
@@ -69,6 +71,8 @@ footer{
 
 #titulo-principal{
     text-decoration: none;
+    color: black;
+    justify-content: center;
     /*utilizar los selectores de id con mucho cuidado.
     Los id tienen una mayor especificidad en css, lo que puede causar problemas.*/
 }
